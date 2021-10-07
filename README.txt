@@ -1,3 +1,15 @@
+Design:
+- Central place where your birds come from
+- Birds randomly given to you
+- When you click, the current bird goes to where
+you clicked and drops off the baby, bird repeats this
+process
+- When a baby enters an area the population increases
+- Mobs spawn in that area depending on population
+- The areas have different mobs that fight
+- If you don't deliver them a baby they fight you
+- When everyone else is dead they fight you
+
 Art Assets:
 https://opengameart.org/content/ui-pack
 https://opengameart.org/content/lpc-tile-atlas
