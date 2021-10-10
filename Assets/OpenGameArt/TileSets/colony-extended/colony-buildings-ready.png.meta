@@ -7288,7 +7288,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -8138,69 +8138,6 @@ TextureImporter:
       bones: []
       spriteID: 9b6dddb779220c060800000000000000
       internalID: 6971610257183069881
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: colony-buildings-ready_38
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 2032
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0758e0729f1c18cc0800000000000000
-      internalID: -3710471342130297488
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: colony-buildings-ready_39
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 2032
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dec9fd9b70d9ff0d0800000000000000
-      internalID: -3386815738250552083
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: colony-buildings-ready_40
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 2032
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 516d522f2f58ce8b0800000000000000
-      internalID: -5121571397735950827
       vertices: []
       indices: 
       edges: []
@@ -58034,6 +57971,69 @@ TextureImporter:
       bones: []
       spriteID: f5867d74d3c51d230800000000000000
       internalID: 3661809390296983647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colony-buildings-ready_38
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 2032
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0758e0729f1c18cc0800000000000000
+      internalID: -3710471342130297488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colony-buildings-ready_39
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 2032
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dec9fd9b70d9ff0d0800000000000000
+      internalID: -3386815738250552083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colony-buildings-ready_40
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 2032
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 516d522f2f58ce8b0800000000000000
+      internalID: -5121571397735950827
       vertices: []
       indices: 
       edges: []
