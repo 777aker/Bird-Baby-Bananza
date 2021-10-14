@@ -32,8 +32,11 @@ public class Bird : MonoBehaviour {
         Quaternion newRotation = Quaternion.Slerp(myRot, rot, Time.deltaTime*speed/2);
         transform.rotation = newRotation;
         transform.position += transform.up * Time.deltaTime*speed;
-        if (Vector2.Distance(flyto, transform.position) < 2)
+        if (Vector2.Distance(flyto, transform.position) < 1) {
+            if(returning)
+                Destroy(gameObject);
             returning = !returning;
+        }
     }
 
 }
