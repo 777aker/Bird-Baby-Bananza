@@ -10,6 +10,9 @@ process
 - If you don't deliver them a baby they fight you
 - When everyone else is dead they fight you
 
+How to ysort:
+https://www.youtube.com/watch?v=CTf0WjhfBx8
+
 Art Assets:
 https://opengameart.org/content/ui-pack
 https://opengameart.org/content/lpc-tile-atlas

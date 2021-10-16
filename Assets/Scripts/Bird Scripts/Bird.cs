@@ -3,24 +3,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bird : MonoBehaviour {
-    public Vector2 target = Vector2.negativeInfinity;
-    public Transform hq = null;
-    public bool returning = false;
-    public float speed = 5;
+public abstract class Bird : MonoBehaviour {
+    protected Vector2 target;
+    protected Transform hq;
+    protected bool returning = false;
+    protected float speed = 5;
+    protected Teams team;
 
-    public virtual void makeBird(Vector2 Target, Transform HQ) {
-        if (target == Vector2.negativeInfinity && hq == null) {
-            target = Target;
-            hq = HQ;
-        }
+    public void makeBird(Vector2 Target, Transform HQ, Teams Team) {
+        target = Target;
+        hq = HQ;
+        team = Team;
     }
     
-    public virtual void Update() {
+    protected virtual void Update() {
         fly();
     }
 
-    public virtual void fly() {
+    protected virtual void fly() {
         Vector2 flyto;
         if (returning)
             flyto = hq.position;
@@ -34,9 +34,15 @@ public class Bird : MonoBehaviour {
         transform.position += transform.up * Time.deltaTime*speed;
         if (Vector2.Distance(flyto, transform.position) < 1) {
             if(returning)
-                Destroy(gameObject);
+                returned();
+            else 
+                arrive();
             returning = !returning;
         }
     }
+
+    protected abstract void arrive();
+
+    protected abstract void returned();
 
 }

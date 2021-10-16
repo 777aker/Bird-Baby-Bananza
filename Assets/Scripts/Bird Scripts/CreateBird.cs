@@ -6,6 +6,14 @@ using UnityEngine.EventSystems;
 using UnityEngine.Tilemaps;
 using Random = System.Random;
 
+public enum Teams {
+    Grey,
+    Yellow,
+    Green,
+    Blue,
+    White
+}
+
 public class CreateBird : MonoBehaviour {
     [SerializeField] private Transform spawn;
     [SerializeField] private List<GameObject> birds;
@@ -15,6 +23,8 @@ public class CreateBird : MonoBehaviour {
     [SerializeField] private Tilemap clickableTilemap;
     private Vector3Int[,] clickableArea;
     private BoundsInt bounds;
+
+    [SerializeField] private Tilemap zones;
 
     private void Start() {
         birdcheck();
@@ -26,25 +36,83 @@ public class CreateBird : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         if (Input.GetMouseButtonDown(0)) {
-            if (clickable(clickableArea, GridPositionOfMouse2D)) {
+            if (clickable(GridPositionOfMouse2D)) {
+                //Debug.Log(zones.GetSprite(GridPositionOfMouse3D));
                 GameObject bird = Instantiate(birds[UnityEngine.Random.Range(0, birds.Count)], spawn);
                 Bird birdcom = bird.GetComponent<Bird>();
-                birdcom.target = maincamera.ScreenToWorldPoint(Input.mousePosition);
-                birdcom.hq = spawn;
+                Teams team;
+                switch (zones.GetSprite(GridPositionOfMouse3D).name) {
+                    case "blowharder_341":
+                        team = Teams.White;
+                        break;
+                    case "blowharder_1216":
+                        team = Teams.Green;
+                        break;
+                    case "blowharder_1232":
+                        team = Teams.Blue;
+                        break;
+                    case "blowharder_1986":
+                        team = Teams.Yellow;
+                        break;
+                    case "blowharder_1995":
+                        team = Teams.Grey;
+                        break;
+                    default:
+                        return;
+                }
+                birdcom.makeBird(maincamera.ScreenToWorldPoint(Input.mousePosition), spawn, team);
             }
         }
     }
     
-    private bool clickable(Vector3Int[,] grid, Vector2Int click) {
+    private bool clickable(Vector2Int click) {
         for (int i = 0; i < bounds.size.x; i++) {
             for (int j = 0; j < bounds.size.y; j++) {
-                if (grid[i, j][0] == click.x && grid[i, j][1] == click.y) {
-                    return grid[i, j][2] == 0;
+                if (clickableArea[i, j][0] == click.x && clickableArea[i, j][1] == click.y) {
+                    if (clickableArea[i, j][2] != 0)
+                        return false;
+                    makeunclickable(i, j);
+                    return true;
                 }
             }
         }
 
         return false;
+    }
+
+    private void makeunclickable(int i, int j) {
+        int imin;
+        int imax;
+        int jmin;
+        int jmax;
+        if (bounds.size.x - 1 != i)
+            imax = 1;
+        else
+            imax = 0;
+        if (i > 0)
+            imin = -1;
+        else
+            imin = 0;
+        if (bounds.size.y - 1 != j)
+            jmax = 1;
+        else
+            jmax = 0;
+        if (j > 0)
+            jmin = -1;
+        else
+            jmin = 0;
+        clickableArea[i, j][2] = 1;
+        
+        clickableArea[i + imax, j][2] = 1;
+        clickableArea[i + imax, j + jmax][2] = 1;
+        clickableArea[i + imax, j + jmin][2] = 1;
+        
+        clickableArea[i + imin, j][2] = 1;
+        clickableArea[i + imin, j + jmax][2] = 1;
+        clickableArea[i + imin, j + jmin][2] = 1;
+
+        clickableArea[i, j + jmax][2] = 1;
+        clickableArea[i, j + jmin][2] = 1;
     }
 
     private void CreateGrid() {
