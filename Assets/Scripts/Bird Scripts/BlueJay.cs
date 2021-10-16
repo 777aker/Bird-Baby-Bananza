@@ -3,10 +3,15 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
 
-public class BlueJay : Bird
-{
+public class BlueJay : Bird {
+    [SerializeField] private GameObject WhiteBuilding;
+    
     protected override void arrive() {
-        return;
+        switch (team) {
+            case Teams.White:
+                Instantiate(WhiteBuilding, transform.position, Quaternion.identity);
+                break;
+        }
     }
 
     protected override void returned() {

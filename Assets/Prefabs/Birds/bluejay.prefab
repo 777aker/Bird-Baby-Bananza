@@ -96,10 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a096a54fafa4b74bbaa3c3aea9e1a58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {x: -Infinity, y: -Infinity}
-  hq: {fileID: 0}
-  returning: 0
-  speed: 10
+  WhiteBuilding: {fileID: 1945369947881600053, guid: d91e6b90fc3f4014e8302d7d5c387a51, type: 3}
 --- !u!95 &8914307941758502734
 Animator:
   serializedVersion: 3
