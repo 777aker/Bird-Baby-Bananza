@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro.EditorUtilities;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Tilemaps;
@@ -69,10 +70,11 @@ public class CreateBird : MonoBehaviour {
         for (int i = 0; i < bounds.size.x; i++) {
             for (int j = 0; j < bounds.size.y; j++) {
                 if (clickableArea[i, j][0] == click.x && clickableArea[i, j][1] == click.y) {
-                    if (clickableArea[i, j][2] != 0)
-                        return false;
-                    makeunclickable(i, j);
-                    return true;
+                    if (clickable(i, j)) {
+                        makeunclickable(i, j);
+                        return true;
+                    }
+                    return false;
                 }
             }
         }
@@ -80,6 +82,51 @@ public class CreateBird : MonoBehaviour {
         return false;
     }
 
+    private bool clickable(int i, int j) {
+        int imin;
+        int imax;
+        int jmin;
+        int jmax;
+        if (bounds.size.x - 1 != i)
+            imax = 1;
+        else
+            imax = 0;
+        if (i > 0)
+            imin = -1;
+        else
+            imin = 0;
+        if (bounds.size.y - 1 != j)
+            jmax = 1;
+        else
+            jmax = 0;
+        if (j > 0)
+            jmin = -1;
+        else
+            jmin = 0;
+        if (clickableArea[i, j][2] != 0)
+            return false;
+
+        if (clickableArea[i + imax, j][2] != 0)
+            return false;
+        if (clickableArea[i + imax, j + jmax][2] != 0)
+            return false;
+        if (clickableArea[i + imax, j + jmin][2] != 0)
+            return false;
+
+        if (clickableArea[i + imin, j][2] != 0)
+            return false;
+        if (clickableArea[i + imin, j + jmax][2] != 0)
+            return false;
+        if (clickableArea[i + imin, j + jmin][2] != 0)
+            return false;
+
+        if (clickableArea[i, j + jmax][2] != 0)
+            return false;
+        if (clickableArea[i, j + jmin][2] != 0)
+            return false;
+        return true;
+    }
+    
     private void makeunclickable(int i, int j) {
         int imin;
         int imax;
