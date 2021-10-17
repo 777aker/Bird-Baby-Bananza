@@ -97,6 +97,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WhiteBuilding: {fileID: 1945369947881600053, guid: d91e6b90fc3f4014e8302d7d5c387a51, type: 3}
+  BlueBuilding: {fileID: 1336468846495118489, guid: 6fc85cfbb7b704545b4155e3baf95bff, type: 3}
+  GreenBuilding: {fileID: 1443948471413109587, guid: 585cb4f13e0cf9f4da6e3fcbd9e192f6, type: 3}
+  YellowBuilding: {fileID: 313687531017829365, guid: c5a30113bebc1094a8e1be4d7d475ae3, type: 3}
+  GreyBuilding: {fileID: 1016193115435031830, guid: 99a79478f2a1b82498e0659bc234f2cb, type: 3}
 --- !u!95 &8914307941758502734
 Animator:
   serializedVersion: 3

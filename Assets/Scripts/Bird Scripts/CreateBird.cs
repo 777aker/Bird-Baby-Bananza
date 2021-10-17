@@ -64,7 +64,7 @@ public class CreateBird : MonoBehaviour {
             }
         }
     }
-    
+
     private bool clickable(Vector2Int click) {
         for (int i = 0; i < bounds.size.x; i++) {
             for (int j = 0; j < bounds.size.y; j++) {
@@ -113,6 +113,41 @@ public class CreateBird : MonoBehaviour {
 
         clickableArea[i, j + jmax][2] = 1;
         clickableArea[i, j + jmin][2] = 1;
+    }
+
+    public void makeclickable(int i, int j) {
+        int imin;
+        int imax;
+        int jmin;
+        int jmax;
+        if (bounds.size.x - 1 != i)
+            imax = 1;
+        else
+            imax = 0;
+        if (i > 0)
+            imin = -1;
+        else
+            imin = 0;
+        if (bounds.size.y - 1 != j)
+            jmax = 1;
+        else
+            jmax = 0;
+        if (j > 0)
+            jmin = -1;
+        else
+            jmin = 0;
+        clickableArea[i, j][2] = 0;
+        
+        clickableArea[i + imax, j][2] = 0;
+        clickableArea[i + imax, j + jmax][2] = 0;
+        clickableArea[i + imax, j + jmin][2] = 0;
+        
+        clickableArea[i + imin, j][2] = 0;
+        clickableArea[i + imin, j + jmax][2] = 0;
+        clickableArea[i + imin, j + jmin][2] = 0;
+
+        clickableArea[i, j + jmax][2] = 0;
+        clickableArea[i, j + jmin][2] = 0;
     }
 
     private void CreateGrid() {
