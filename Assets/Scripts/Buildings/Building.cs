@@ -90,7 +90,7 @@ public class Building : MonoBehaviour {
 
     IEnumerator spawnUnits() {
         while (true) {
-            Debug.Log("did it");
+            //Debug.Log("did it");
             GameObject unitSpawned = Instantiate(unit, transform.position, Quaternion.identity);
             unitSpawned.GetComponent<Unit>().onMade(birdsbase, HQs[UnityEngine.Random.Range(0, HQs.Count)]);
             yield return new WaitForSeconds(spawntime);

@@ -21,6 +21,7 @@ TagManager:
   - WhiteUnit
   - Building
   - Unit
+  - walkableTM
   layers:
   - Default
   - TransparentFX

@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a9015336d24ae4a8cb4d1dd7662551, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unit: {fileID: 7565701847786693197, guid: ec2e41ee6782fc1418c29c29bfc01b28, type: 3}
+  unit: {fileID: 931694118770314487, guid: 20caf8b47d37a1c45b26579ff80ca5c7, type: 3}
   spawntime: 1
 --- !u!61 &2010836251381772873
 BoxCollider2D:
