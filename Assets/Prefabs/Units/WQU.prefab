@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 4605142525885925568}
   - component: {fileID: 1390445217177023207}
   - component: {fileID: 5531407319350028533}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: WQU
-  m_TagString: Untagged
+  m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: -7308791459333966709, guid: 800162047e99e7447b21d6729e6536c6, type: 3}
+  m_Sprite: {fileID: 3198928646347315979, guid: 800162047e99e7447b21d6729e6536c6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

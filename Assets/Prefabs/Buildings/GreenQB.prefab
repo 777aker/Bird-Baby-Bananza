@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 1443948471413109584}
   - component: {fileID: 8021017191794590472}
   - component: {fileID: 2010836251381772873}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: GreenQB
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 313687531017829366}
   - component: {fileID: 9152439218624351150}
   - component: {fileID: 843425145251183343}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: YQB
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

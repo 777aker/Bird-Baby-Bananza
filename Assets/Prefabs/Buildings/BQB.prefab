@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 1336468846495118490}
   - component: {fileID: 7626169263669871810}
   - component: {fileID: 2117277604467373443}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: BQB
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

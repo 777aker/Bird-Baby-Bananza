@@ -9,6 +9,18 @@ TagManager:
   - YellowBase
   - BlueBase
   - WhiteBase
+  - GreenBuilding
+  - GreyBuilding
+  - WhiteBuilding
+  - YellowBuilding
+  - BlueBuilding
+  - GreenUnit
+  - GreyUnit
+  - BlueUnit
+  - YellowUnit
+  - WhiteUnit
+  - Building
+  - Unit
   layers:
   - Default
   - TransparentFX
@@ -20,14 +32,14 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Base
+  - Unit
+  - Building
+  - White
+  - Green
+  - Yellow
+  - Blue
+  - Grey
   - 
   - 
   - 
