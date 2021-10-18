@@ -15,6 +15,7 @@ public class ClassStuff : MonoBehaviour, IPointerClickHandler {
 
     public void Awake() {
         maincamera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
+        camerascript = maincamera.GetComponent<evenmoreclass>();
         circle = gameObject.GetComponent<SpriteRenderer>();
     }
 

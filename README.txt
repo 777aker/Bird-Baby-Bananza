@@ -1,8 +1,21 @@
+Totally not done but I don't have anymore time so turning in an unfinished product
+You can right click on the top of the big buildings to make the circle activate above them
+You can left click in zones to spawn buildings that will spawn units
+Not really any winning or losing currently
+It's built so it's really easy to expand so it wouldn't be that hard to add stuff
+I just don't have the time
+IE birds is a class that can inherit and be copied easily, so are buildings, and units
+And then there is actually a gameover and gamewin conditions built in they just don't do anything
+
 Design:
 - Central place where your birds come from
 - Birds randomly given to you
 - When you click, the current bird goes to where
-you clicked and drops off the baby, bird repeats this
+you clicked and drops building
+- Building spawns units
+- Units kill units and buildings
+- If 1 HQ is destroyed you lose
+- If you activate all 5 HQs game ends
 process
 - When a baby enters an area the population increases
 - Mobs spawn in that area depending on population
