@@ -6,19 +6,22 @@ using UnityEngine;
 using Random = Unity.Mathematics.Random;
 
 public class Building : MonoBehaviour {
-    protected int health = 100;
+    [SerializeField] protected int health = 100;
     protected CreateBird birdspawner;
     protected int[] clickablepoint = new int[2];
     protected Transform birdsbase;
     [SerializeField] protected GameObject unit;
-    protected Teams team;
+    [SerializeField] protected Teams team;
     [SerializeField] protected float spawntime;
     protected List<Transform> HQs = new List<Transform>();
+    [SerializeField] private bool HQ = false;
 
     protected void createdone() {
         GameObject birdbase = GameObject.Find("BirdSpawn");
         birdspawner = birdbase.GetComponent<CreateBird>();
         birdsbase = birdbase.transform;
+        if (HQ)
+            return;
         switch (team) {
             case Teams.Blue:
                 GameObject base1 = GameObject.FindWithTag("GreenBase");
@@ -83,8 +86,18 @@ public class Building : MonoBehaviour {
     public void takeDamage(int damage) {
         health -= damage;
         if (health <= 0) {
-            birdspawner.makeclickable(clickablepoint[0], clickablepoint[1]);
-            Destroy(gameObject);
+            if (clickablepoint[0] == -10000 || clickablepoint[1] == -10000) {
+                birdspawner.gameover();
+            } else {
+                birdspawner.makeclickable(clickablepoint[0], clickablepoint[1]);
+                Destroy(gameObject);
+            }
+        }
+    }
+
+    private void Awake() {
+        if (HQ) {
+            onCreate(-10000, -10000, team);
         }
     }
 
