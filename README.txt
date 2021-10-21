@@ -5,7 +5,9 @@ Not really any winning or losing currently
 It's built so it's really easy to expand so it wouldn't be that hard to add stuff
 I just don't have the time
 IE birds is a class that can inherit and be copied easily, so are buildings, and units
-And then there is actually a gameover and gamewin conditions built in they just don't do anything
+The way birds are created is from a list so you can just add your new ones to the list
+And then there is actually a gameover and gamewin conditions, with a score
+variable saved and updated, and methods called, but they just don't do anything
 
 Design:
 - Central place where your birds come from
